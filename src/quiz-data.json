@@ -1,0 +1,85 @@
+{
+  "id": 1,
+  "lang": "en",
+  "questions": [
+    {
+      "label": "What is the Capital of Australia?",
+      "options": [
+        {
+          "label": "Canberra",
+          "value": 1,
+          "validity": "valid"
+        },
+        {
+          "label": "Sydney",
+          "value": 0,
+          "validity": "invalid"
+        }
+      ],
+      "user_answer": null
+    },
+    {
+      "label": "Which of these colors is NOT in the Albanian flag?",
+      "options": [
+        {
+          "label": "Green",
+          "value": 1,
+          "validity": "valid"
+        },
+        {
+          "label": "Black",
+          "value": 0,
+          "validity": "invalid"
+        }
+      ]
+    },
+    {
+      "label": "Which European country is furthest North?",
+      "options": [
+        {
+          "label": "Finland",
+          "value": 0,
+          "validity": "invalid"
+        },
+        {
+          "label": "Norway",
+          "value": 1,
+          "validity": "valid"
+        }
+      ]
+    },
+    {
+      "label": "Which US state boasts the largest populate?",
+      "options": [
+        {
+          "label": "Texas",
+          "value": 0,
+          "validity": "invalid"
+        },
+        {
+          "label": "California",
+          "value": 1,
+          "validity": "valid"
+        }
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "threshold": 0,
+      "grade": "F"
+    },
+    {
+      "threshold": 2,
+      "grade": "C"
+    },
+    {
+      "threshold": 3,
+      "grade": "B"
+    },
+    {
+      "threshold": 4,
+      "grade": "A"
+    }
+  ]
+}
