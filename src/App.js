@@ -3,13 +3,17 @@ import Quiz from './Quiz.js';
 import './vinyl.css';
 import './App.css';
 
+// jayfid
+// Jan 17 2017
+// Simple display wrapper.
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      started: false,
+      started: false,// used to determine whether or not to show intro.
     };
   }
+  // Return Intro markup.
   showIntro() {
     return (
       <div>
@@ -23,6 +27,7 @@ class App extends Component {
       </div>
     );
   }
+  // Passable function to remove intro.
   start() {
     this.setState({ started: true });
   }

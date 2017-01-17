@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import config from './quiz-data.json';
 import button from './button.svg';
 
+// Quiz class controls the data and display of the quiz.
 class Quiz extends Component {
   constructor(props) {
     super();
-    this.state = config;
+    this.state = config;// the loaded json data.
+
+    // bind `this` to callback functions.
     this.onSelect = this.onSelect.bind(this);
     this.initialize = this.initialize.bind(this);
   }
+  // reset answers to initial state.
   initialize() {
     const questions = this.state.questions.slice();
     questions.map((question) => {
@@ -16,6 +20,7 @@ class Quiz extends Component {
     });
     this.setState({ questions: questions });
   }
+  // respond to a clicked option.
   onSelect(questionIndex, optionIndex) {
     const questions = this.state.questions.slice();
     questions[questionIndex].user_answer = optionIndex;
@@ -27,6 +32,7 @@ class Quiz extends Component {
     let content, classes;
     for (let i = 0, len = this.state.questions.length; i < len; i++) {
       let question = this.state.questions[i];
+      // Find the first unanswered question and display it.  Otherwise show the summary.
       if (typeof question.user_answer === 'undefined' || question.user_answer === null) {
         let questionNumber = i + 1, questionCount = this.state.questions.length;
         content = (
@@ -59,6 +65,8 @@ class Quiz extends Component {
   }
 }
 
+// Useful react subcomponent to display a single question.  State is fed to
+// the Question class and action are taken through passed event handlers.
 class Question extends Component {
   constructor(props) {
     super();
@@ -95,6 +103,7 @@ class Question extends Component {
   }
 }
 
+// Utility class to render options.
 function Option(props) {
   return (
     <div>
@@ -106,6 +115,9 @@ function Option(props) {
   );
 }
 
+// Summary displays when there are no more unanswered questions.
+// Summary calculates the grade based on the passed grading metrics.
+// The user's answers are displayed for review.
 class Summary extends Component {
   constructor(props) {
     super();
