@@ -8,7 +8,7 @@ This was created with React, using JSX and [create-react-app](https://github.com
 Quiz data is stored in JSON in the form
 ```
 {
-  question[
+  questions[
     ...
   ],
   grades[
@@ -22,7 +22,7 @@ See [src/quiz-data.json](src/quiz-data.json)
 
 ## Installation
 
-You can use the following commands download and run the sample code.
+You can use the following commands to download and run the sample code.
 ```bash
 $ mkdir quizzr && cd quizzr
 $ git clone http://github.com/jayfid/quizzr.git .
